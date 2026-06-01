@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  credit_risk_api:
+    build: .
+    container_name: bati_bank_risk_service
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    environment:
+      - ENV=production
